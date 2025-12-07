@@ -26,3 +26,4 @@ void Camera::printInfo() const {
               << " fov=" << fov_ << " rad\n";
 }
 
+
