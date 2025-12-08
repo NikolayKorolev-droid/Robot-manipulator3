@@ -351,10 +351,34 @@ class App(tk.Tk):
         x = ctypes.c_double()
         y = ctypes.c_double()
         z = ctypes.c_double()
-        ok = rm.rm_calculate_position(self.manip, id_, ctypes.byref(x), ctypes.byref(y), ctypes.byref(z))
-        if not ok:
-            messagebox.showerror("Ошибка", f"Не удалось вычислить позицию для звена с ID={id_}.\nВозможные причины:\n- Звено с таким ID не существует\n- Нарушена цепочка звеньев до данного звена\n- Обнаружено столкновение звеньев")
+        result = rm.rm_calculate_position(self.manip, id_, ctypes.byref(x), ctypes.byref(y), ctypes.byref(z))
+        
+        
+        # Если звено существует, а расчет не удался (result <= 0), то наверно
+        # это ошибка библиотеки из-за нарушения цепочки (одно звено в цепочке отсутствует)
+        # Если звено вообще не существует (id_ не в self.links), то это ошибка ввода.
+        
+        if result == -1:
+            # ManipulatorException из библиотеки - нарушена цепочка звеньев (демонстрация)
+            messagebox.showerror("Ошибка библиотеки", 
+                                 f"Ошибка при вычислении позиции звена с ID={id_}.\n\n"
+                                 "Нарушена цепочка звеньев: одно из промежуточных звеньев в цепочке до данного звена отсутствует.")
             return
+        elif result == 0:
+            # Если звено, которое мы запрашиваем, вообще не существует в UI (т.е. id_ не в self.links),
+            # то это ошибка ввода
+            if id_ not in self.links:
+                messagebox.showerror("Ошибка", f"Не удалось вычислить позицию для звена с ID={id_}.\nВозможные причины:\n- Звено с таким ID не существует")
+                return
+            
+            # Если звено существует в UI, но расчет не удался (result=0),
+            # то показываем сообщение об ошибке библиотеки.
+            messagebox.showerror("Ошибка библиотеки", 
+                                 f"Ошибка при вычислении позиции звена с ID={id_}.\n\n"
+                                 "Нарушена цепочка звеньев: одно из промежуточных звеньев в цепочке до данного звена отсутствует.")
+            return
+        
+        # result == 1 - успех
         self.lbl_pos.config(text=f"x={x.value:.4f}, y={y.value:.4f}, z={z.value:.4f}")
 
     def on_print_structure(self):
