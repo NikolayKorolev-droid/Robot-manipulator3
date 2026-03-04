@@ -22,5 +22,4 @@
 
 ## Как запустить
 
-1. Соберите `RobotManipulator.dll` (см. руководство, раздел 2.2)
-2. Выполните: `python python/ui.py`
+1. Выполните ui.exe в python/dist
