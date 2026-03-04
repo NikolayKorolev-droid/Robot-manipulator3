@@ -1,0 +1,365 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ru">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.16.1"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Robot Manipulator: Класс Manipulator</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript">var page_layout=1;</script>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+  $(function() { init_search(); });
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="side-nav" class="ui-resizable side-nav-resizable"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">Robot Manipulator<span id="projectnumber">&#160;1.0</span>
+   </div>
+   <div id="projectbrief">Система моделирования кинематики робота-манипулятора</div>
+  </td>
+ </tr>
+   <tr><td colspan="2">        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <span id="MSearchSelect" class="search-icon" onmouseover="return searchBox.OnSearchSelectShow()" onmouseout="return searchBox.OnSearchSelectHide()"><span class="search-icon-dropdown"></span></span>
+          <input type="text" id="MSearchField" value="" placeholder="Поиск" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><div id="MSearchCloseImg" class="close-icon"></div></a>
+          </span>
+        </div>
+</td></tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.16.1 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+</div><!-- top -->
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(function(){initNavTree('class_manipulator.html','','class_manipulator-members'); });
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',false,false,'search.php','Поиск',true);
+});
+</script>
+<div id="main-nav"></div>
+<div id="container"><div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Загрузка...</div>
+<div class="SRStatus" id="Searching">Поиск...</div>
+<div class="SRStatus" id="NoMatches">Не найдено</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">Класс Manipulator</div></div>
+</div><!--header-->
+<div class="contents">
+
+<p>Класс манипулятора — центральный контроллер всех звеньев  
+ <a href="#details">Подробнее...</a></p>
+
+<p><code>#include &lt;<a class="el" href="_manipulator_8h_source.html">Manipulator.h</a>&gt;</code></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pub-methods" class="groupheader"><a id="pub-methods" name="pub-methods"></a>
+Открытые члены</h2></td></tr>
+<tr class="memitem:a52cca5fab68fbb457bfce3091b0d450e" id="r_a52cca5fab68fbb457bfce3091b0d450e"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a52cca5fab68fbb457bfce3091b0d450e">addLink</a> (<a class="el" href="class_movable_link.html">MovableLink</a> *link)</td></tr>
+<tr class="memdesc:a52cca5fab68fbb457bfce3091b0d450e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Добавить звено (владение переходит к <a class="el" href="class_manipulator.html" title="Класс манипулятора — центральный контроллер всех звеньев">Manipulator</a>).  <br /></td></tr>
+<tr class="memitem:ac4abcaafe84492135f0a7d71310ff504" id="r_ac4abcaafe84492135f0a7d71310ff504"><td class="memItemLeft"><a class="el" href="class_movable_link.html">MovableLink</a> *&#160;</td><td class="memItemRight"><a class="el" href="#ac4abcaafe84492135f0a7d71310ff504">getLink</a> (int id) const</td></tr>
+<tr class="memdesc:ac4abcaafe84492135f0a7d71310ff504"><td class="mdescLeft">&#160;</td><td class="mdescRight">Получить звено по ID, или nullptr.  <br /></td></tr>
+<tr class="memitem:a2fb2cc91edcd782ddd3df44c133b7ec2" id="r_a2fb2cc91edcd782ddd3df44c133b7ec2"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a2fb2cc91edcd782ddd3df44c133b7ec2">setDirection</a> (int id, double new_pitch, double new_yaw, double new_roll)</td></tr>
+<tr class="memitem:aa2242cfda8fd9c424ca79165fdc1ab59" id="r_aa2242cfda8fd9c424ca79165fdc1ab59"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#aa2242cfda8fd9c424ca79165fdc1ab59">openGripper</a> (int id, double angle)</td></tr>
+<tr class="memitem:a7727eacc9f332716b586819fc73c4206" id="r_a7727eacc9f332716b586819fc73c4206"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a7727eacc9f332716b586819fc73c4206">closeGripper</a> (int id)</td></tr>
+<tr class="memitem:a9b42fc92a05075c92564d988fb44b020" id="r_a9b42fc92a05075c92564d988fb44b020"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a9b42fc92a05075c92564d988fb44b020">takePhoto</a> (int id)</td></tr>
+<tr class="memitem:acb2e5b42ce307cc4c3fec61e247eb812" id="r_acb2e5b42ce307cc4c3fec61e247eb812"><td class="memItemLeft">std::tuple&lt; double, double, double &gt;&#160;</td><td class="memItemRight"><a class="el" href="#acb2e5b42ce307cc4c3fec61e247eb812">calculatePosition</a> (int id) const</td></tr>
+<tr class="memdesc:acb2e5b42ce307cc4c3fec61e247eb812"><td class="mdescLeft">&#160;</td><td class="mdescRight">Вычислить позицию звена (x,y,z) в глобальной СК  <br /></td></tr>
+<tr class="memitem:a3dc7c54974acd885044767e901bbee5a" id="r_a3dc7c54974acd885044767e901bbee5a"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a3dc7c54974acd885044767e901bbee5a">printStructure</a> () const</td></tr>
+<tr class="memdesc:a3dc7c54974acd885044767e901bbee5a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Вывод структуры в stdout.  <br /></td></tr>
+</table>
+<a name="details" id="details"></a><h2 id="header-details" class="groupheader">Подробное описание</h2>
+<div class="textblock"><p>Класс манипулятора — центральный контроллер всех звеньев </p>
+<p>Хранит звенья в std::map, вычисляет позиции в глобальной СК, проверяет столкновения. </p>
+
+<p class="definition">См. определение в файле <a class="el" href="_manipulator_8h_source.html">Manipulator.h</a> строка <a class="el" href="_manipulator_8h_source.html#l00018">18</a></p>
+</div><a name="doc-constructors" id="doc-constructors"></a><h2 id="header-doc-constructors" class="groupheader">Конструктор(ы)</h2>
+<a id="ab26e1b16415d3ee9d5cb7bdd42e8a708" name="ab26e1b16415d3ee9d5cb7bdd42e8a708"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab26e1b16415d3ee9d5cb7bdd42e8a708">&#9670;&#160;</a></span>~Manipulator()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Manipulator::~Manipulator </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">См. определение в файле <a class="el" href="_manipulator_8cpp_source.html">Manipulator.cpp</a> строка <a class="el" href="_manipulator_8cpp_source.html#l00012">12</a></p>
+
+</div>
+</div>
+<a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Методы</h2>
+<a id="a52cca5fab68fbb457bfce3091b0d450e" name="a52cca5fab68fbb457bfce3091b0d450e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a52cca5fab68fbb457bfce3091b0d450e">&#9670;&#160;</a></span>addLink()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Manipulator::addLink </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_movable_link.html">MovableLink</a> *</td>          <td class="paramname"><span class="paramname"><em>link</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Добавить звено (владение переходит к <a class="el" href="class_manipulator.html" title="Класс манипулятора — центральный контроллер всех звеньев">Manipulator</a>). </p>
+
+<p class="definition">См. определение в файле <a class="el" href="_manipulator_8cpp_source.html">Manipulator.cpp</a> строка <a class="el" href="_manipulator_8cpp_source.html#l00018">18</a></p>
+
+</div>
+</div>
+<a id="acb2e5b42ce307cc4c3fec61e247eb812" name="acb2e5b42ce307cc4c3fec61e247eb812"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acb2e5b42ce307cc4c3fec61e247eb812">&#9670;&#160;</a></span>calculatePosition()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::tuple&lt; double, double, double &gt; Manipulator::calculatePosition </td>
+          <td>(</td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>id</em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Вычислить позицию звена (x,y,z) в глобальной СК </p>
+<dl class="exception"><dt>Исключения</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname"><a class="el" href="class_manipulator_exception.html" title="Исключение для ошибок манипулятора (например, нарушена цепочка звеньев).">ManipulatorException</a></td><td>если нарушена цепочка звеньев </td></tr>
+    <tr><td class="paramname">std::runtime_error</td><td>при столкновении или отсутствии звена </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">См. определение в файле <a class="el" href="_manipulator_8cpp_source.html">Manipulator.cpp</a> строка <a class="el" href="_manipulator_8cpp_source.html#l00077">77</a></p>
+
+</div>
+</div>
+<a id="a7727eacc9f332716b586819fc73c4206" name="a7727eacc9f332716b586819fc73c4206"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7727eacc9f332716b586819fc73c4206">&#9670;&#160;</a></span>closeGripper()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Manipulator::closeGripper </td>
+          <td>(</td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>id</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">См. определение в файле <a class="el" href="_manipulator_8cpp_source.html">Manipulator.cpp</a> строка <a class="el" href="_manipulator_8cpp_source.html#l00052">52</a></p>
+
+</div>
+</div>
+<a id="ac4abcaafe84492135f0a7d71310ff504" name="ac4abcaafe84492135f0a7d71310ff504"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac4abcaafe84492135f0a7d71310ff504">&#9670;&#160;</a></span>getLink()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_movable_link.html">MovableLink</a> * Manipulator::getLink </td>
+          <td>(</td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>id</em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Получить звено по ID, или nullptr. </p>
+
+<p class="definition">См. определение в файле <a class="el" href="_manipulator_8cpp_source.html">Manipulator.cpp</a> строка <a class="el" href="_manipulator_8cpp_source.html#l00028">28</a></p>
+
+</div>
+</div>
+<a id="aa2242cfda8fd9c424ca79165fdc1ab59" name="aa2242cfda8fd9c424ca79165fdc1ab59"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa2242cfda8fd9c424ca79165fdc1ab59">&#9670;&#160;</a></span>openGripper()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Manipulator::openGripper </td>
+          <td>(</td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>id</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double</td>          <td class="paramname"><span class="paramname"><em>angle</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">См. определение в файле <a class="el" href="_manipulator_8cpp_source.html">Manipulator.cpp</a> строка <a class="el" href="_manipulator_8cpp_source.html#l00043">43</a></p>
+
+</div>
+</div>
+<a id="a3dc7c54974acd885044767e901bbee5a" name="a3dc7c54974acd885044767e901bbee5a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3dc7c54974acd885044767e901bbee5a">&#9670;&#160;</a></span>printStructure()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Manipulator::printStructure </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Вывод структуры в stdout. </p>
+
+<p class="definition">См. определение в файле <a class="el" href="_manipulator_8cpp_source.html">Manipulator.cpp</a> строка <a class="el" href="_manipulator_8cpp_source.html#l00185">185</a></p>
+
+<p class="reference">Перекрестные ссылки <a class="el" href="_movable_link_8cpp_source.html#l00043">MovableLink::printInfo()</a>.</p>
+
+</div>
+</div>
+<a id="a2fb2cc91edcd782ddd3df44c133b7ec2" name="a2fb2cc91edcd782ddd3df44c133b7ec2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2fb2cc91edcd782ddd3df44c133b7ec2">&#9670;&#160;</a></span>setDirection()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Manipulator::setDirection </td>
+          <td>(</td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>id</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double</td>          <td class="paramname"><span class="paramname"><em>new_pitch</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double</td>          <td class="paramname"><span class="paramname"><em>new_yaw</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double</td>          <td class="paramname"><span class="paramname"><em>new_roll</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">См. определение в файле <a class="el" href="_manipulator_8cpp_source.html">Manipulator.cpp</a> строка <a class="el" href="_manipulator_8cpp_source.html#l00037">37</a></p>
+
+</div>
+</div>
+<a id="a9b42fc92a05075c92564d988fb44b020" name="a9b42fc92a05075c92564d988fb44b020"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9b42fc92a05075c92564d988fb44b020">&#9670;&#160;</a></span>takePhoto()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Manipulator::takePhoto </td>
+          <td>(</td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>id</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">См. определение в файле <a class="el" href="_manipulator_8cpp_source.html">Manipulator.cpp</a> строка <a class="el" href="_manipulator_8cpp_source.html#l00061">61</a></p>
+
+</div>
+</div>
+<hr/>Объявления и описания членов классов находятся в файлах:<ul>
+<li>src/<a class="el" href="_manipulator_8h_source.html">Manipulator.h</a></li>
+<li>src/<a class="el" href="_manipulator_8cpp_source.html">Manipulator.cpp</a></li>
+</ul>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<div id="page-nav" class="page-nav-panel">
+<div id="page-nav-resize-handle"></div>
+<div id="page-nav-tree">
+<div id="page-nav-contents">
+</div><!-- page-nav-contents -->
+</div><!-- page-nav-tree -->
+</div><!-- page-nav -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a href="class_manipulator.html">Manipulator</a></li>
+    <li class="footer">Документация по Robot Manipulator. Последние изменения: <span class="timestamp"></span>. Создано системой <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.16.1 </li>
+  </ul>
+</div>
+</body>
+</html>

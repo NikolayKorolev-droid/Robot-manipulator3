@@ -54,6 +54,7 @@ RM_EXPORT int rm_take_photo(RM_Manipulator manip, int id);
 // Параметры:
 // - id: идентификатор звена
 // - out_x/out_y/out_z: указатели на double, куда будет записана позиция
+// Возврат: 1 — успех, 0 — общая ошибка, -1 — специальная ошибка из библиотеки (ManipulatorException)
 RM_EXPORT int rm_calculate_position(RM_Manipulator manip, int id, double* out_x, double* out_y, double* out_z);
 // Печатает структуру манипулятора в stdout (консоль).
 // Параметры: manip — дескриптор манипулятора.

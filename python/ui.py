@@ -337,7 +337,7 @@ class App(tk.Tk):
         ok = rm.rm_take_photo(self.manip, id_)
         if not ok:
             messagebox.showerror("Ошибка", f"Не удалось сделать снимок для звена с ID={id_}.\nВозможные причины:\n- Звено с таким ID не существует\n- Звено не является камерой (Camera)")
-
+    
     def on_calc_pos(self):
         """Вычислить глобальную позицию звена и показать её в UI."""
         try:

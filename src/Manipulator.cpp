@@ -1,4 +1,5 @@
 #include "Manipulator.h"
+#include "ManipulatorException.h"
 #include <iostream>
 #include <cmath>
 #include <cassert>
@@ -85,7 +86,12 @@ std::tuple<double, double, double> Manipulator::calculatePosition(int id) const 
     while (current_id != 0) {
         auto it = links_.find(current_id);
         if (it == links_.end()) {
-            throw std::runtime_error("incomplete chain to link " + std::to_string(id));
+            // ДЕМОНСТРАЦИЯ ОБРАБОТКИ ОШИБОК ИЗ БИБЛИОТЕКИ (Этап 4):
+            // Бросаем специальное исключение ManipulatorException вместо std::runtime_error.
+            // Это исключение будет поймано в c_api.cpp и обработано специальным образом,
+            // что позволит передать информацию об ошибке в графический интерфейс.
+            throw ManipulatorException("Нарушена цепочка звеньев до звена с ID=" + std::to_string(id) + 
+                                       ". Звено с ID=" + std::to_string(current_id) + " не найдено.");
         }
         chain.push_back(current_id);
         current_id = it->second->getPrevId();

@@ -1,10 +1,12 @@
 #include "c_api.h"
 #include "Manipulator.h"
+#include "ManipulatorException.h"
 #include "MovableLink.h"
 #include "Gripper.h"
 #include "Camera.h"
 
 #include <new>
+#include <stdexcept>
 
 extern "C" {
 
@@ -119,7 +121,8 @@ int rm_take_photo(RM_Manipulator manip, int id) {
 }
 
 int rm_calculate_position(RM_Manipulator manip, int id, double* out_x, double* out_y, double* out_z) {
-    // Вычисляет позицию звена и записывает в переданные указатели. Возвращает 1/0.
+    // Вычисляет позицию звена и записывает в переданные указатели. 
+    // Возвращает 1 при успехе, 0 при общей ошибке, -1 при ManipulatorException.
     if (!manip || !out_x || !out_y || !out_z) return 0;
     try {
         Manipulator* m = reinterpret_cast<Manipulator*>(manip);
@@ -128,7 +131,16 @@ int rm_calculate_position(RM_Manipulator manip, int id, double* out_x, double* o
         *out_y = std::get<1>(pos);
         *out_z = std::get<2>(pos);
         return 1;
+    } catch (const ManipulatorException& e) {
+        // ДЕМОНСТРАЦИЯ ОБРАБОТКИ ОШИБОК ИЗ БИБЛИОТЕКИ (Этап 4):
+        // Специальное исключение ManipulatorException из библиотеки ловится здесь конкретно,
+        // а не через catch(...), что позволяет передать информацию об ошибке в интерфейс.
+        // Возвращаем код -1, который будет обработан в Python UI для показа пользователю
+        // понятного сообщения об ошибке.
+        std::cerr << "ManipulatorException: " << e.what() << std::endl;
+        return -1;
     } catch (...) {
+        // Все остальные исключения - общая ошибка
         return 0;
     }
 }

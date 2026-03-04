@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+
+<html lang="ru" data-content_root="./">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Robot Manipulator — Python UI &#8212; Robot Manipulator — Python API</title>
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=5ecbeea2" />
+    <link rel="stylesheet" type="text/css" href="_static/basic.css?v=b08954a9" />
+    <link rel="stylesheet" type="text/css" href="_static/alabaster.css?v=27fed22d" />
+    <script src="_static/documentation_options.js?v=9ca2116e"></script>
+    <script src="_static/doctools.js?v=fd6eb6e6"></script>
+    <script src="_static/sphinx_highlight.js?v=6ffebe34"></script>
+    <script src="_static/translations.js?v=cd1d70c9"></script>
+    <link rel="index" title="Алфавитный указатель" href="genindex.html" />
+    <link rel="search" title="Поиск" href="search.html" />
+   
+  <link rel="stylesheet" href="_static/custom.css" type="text/css" />
+  
+
+  
+  
+
+  </head><body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          
+
+          <div class="body" role="main">
+            
+  <section id="robot-manipulator-python-ui">
+<h1>Robot Manipulator — Python UI<a class="headerlink" href="#robot-manipulator-python-ui" title="Ссылка на этот заголовок">¶</a></h1>
+<p>Графический интерфейс для системы моделирования робота-манипулятора.</p>
+<section id="module-ui">
+<span id="id1"></span><h2>Модули<a class="headerlink" href="#module-ui" title="Ссылка на этот заголовок">¶</a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="ui.App">
+<span class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></span><span class="sig-prename descclassname"><span class="pre">ui.</span></span><span class="sig-name descname"><span class="pre">App</span></span><a class="reference internal" href="_modules/ui.html#App"><span class="viewcode-link"><span class="pre">[исходный</span> <span class="pre">код]</span></span></a><a class="headerlink" href="#ui.App" title="Ссылка на это определение">¶</a></dt>
+<dd><p>Базовые классы: <code class="xref py py-class docutils literal notranslate"><span class="pre">Tk</span></code></p>
+<p>Главное окно приложения Robot Manipulator UI.</p>
+<p>Создаёт экземпляр манипулятора через rm_create_manipulator(),
+настраивает три вкладки (Сборка, Управление, Позиция/структура)
+и освобождает манипулятор при закрытии.</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="ui.App.destroy">
+<span class="sig-name descname"><span class="pre">destroy</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="reference internal" href="_modules/ui.html#App.destroy"><span class="viewcode-link"><span class="pre">[исходный</span> <span class="pre">код]</span></span></a><a class="headerlink" href="#ui.App.destroy" title="Ссылка на это определение">¶</a></dt>
+<dd><p>Destroy this and all descendants widgets. This will
+end the application of this Tcl interpreter.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="ui.App.on_add_link">
+<span class="sig-name descname"><span class="pre">on_add_link</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/ui.html#App.on_add_link"><span class="viewcode-link"><span class="pre">[исходный</span> <span class="pre">код]</span></span></a><a class="headerlink" href="#ui.App.on_add_link" title="Ссылка на это определение">¶</a></dt>
+<dd><p>Обработчик: добавление звена.
+По типу (MovableLink/Gripper/Camera) вызывает соответствующую функцию DLL.
+Автоматически определяет предыдущее звено как ID-1.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="ui.App.on_calc_pos">
+<span class="sig-name descname"><span class="pre">on_calc_pos</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/ui.html#App.on_calc_pos"><span class="viewcode-link"><span class="pre">[исходный</span> <span class="pre">код]</span></span></a><a class="headerlink" href="#ui.App.on_calc_pos" title="Ссылка на это определение">¶</a></dt>
+<dd><p>Вычислить глобальную позицию звена и показать её в UI.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="ui.App.on_close_gripper">
+<span class="sig-name descname"><span class="pre">on_close_gripper</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/ui.html#App.on_close_gripper"><span class="viewcode-link"><span class="pre">[исходный</span> <span class="pre">код]</span></span></a><a class="headerlink" href="#ui.App.on_close_gripper" title="Ссылка на это определение">¶</a></dt>
+<dd><p>Закрыть захват (для Gripper).</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="ui.App.on_open_gripper">
+<span class="sig-name descname"><span class="pre">on_open_gripper</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/ui.html#App.on_open_gripper"><span class="viewcode-link"><span class="pre">[исходный</span> <span class="pre">код]</span></span></a><a class="headerlink" href="#ui.App.on_open_gripper" title="Ссылка на это определение">¶</a></dt>
+<dd><p>Открыть захват на указанный угол (для Gripper).</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="ui.App.on_print_structure">
+<span class="sig-name descname"><span class="pre">on_print_structure</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/ui.html#App.on_print_structure"><span class="viewcode-link"><span class="pre">[исходный</span> <span class="pre">код]</span></span></a><a class="headerlink" href="#ui.App.on_print_structure" title="Ссылка на это определение">¶</a></dt>
+<dd><p>Печать структуры манипулятора в stdout (консоль).</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="ui.App.on_set_dir">
+<span class="sig-name descname"><span class="pre">on_set_dir</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/ui.html#App.on_set_dir"><span class="viewcode-link"><span class="pre">[исходный</span> <span class="pre">код]</span></span></a><a class="headerlink" href="#ui.App.on_set_dir" title="Ссылка на это определение">¶</a></dt>
+<dd><p>Установить ориентацию звена (pitch/yaw/roll) через DLL.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="ui.App.on_take_photo">
+<span class="sig-name descname"><span class="pre">on_take_photo</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/ui.html#App.on_take_photo"><span class="viewcode-link"><span class="pre">[исходный</span> <span class="pre">код]</span></span></a><a class="headerlink" href="#ui.App.on_take_photo" title="Ссылка на это определение">¶</a></dt>
+<dd><p>Сделать «снимок» (для Camera). Реализация вывода — в C++ коде.</p>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+<section id="app">
+<h2>Класс App<a class="headerlink" href="#app" title="Ссылка на этот заголовок">¶</a></h2>
+<p>Главное окно приложения. Содержит три вкладки:</p>
+<ul class="simple">
+<li><p><strong>Сборка манипулятора</strong> — добавление звеньев (MovableLink, Gripper, Camera)</p></li>
+<li><p><strong>Управление</strong> — установка ориентации, открытие/закрытие захвата, снимок камеры</p></li>
+<li><p><strong>Позиция/структура</strong> — расчёт координат звена, вывод структуры в консоль</p></li>
+</ul>
+</section>
+<section id="dll">
+<h2>Взаимодействие с DLL<a class="headerlink" href="#dll" title="Ссылка на этот заголовок">¶</a></h2>
+<p>Модуль <code class="docutils literal notranslate"><span class="pre">ui</span></code> загружает <code class="docutils literal notranslate"><span class="pre">RobotManipulator.dll</span></code> через ctypes и вызывает
+C-API функции (rm_create_manipulator, rm_add_link, rm_set_direction и т.д.).
+См. также документацию C++ (Doxygen).</p>
+</section>
+</section>
+
+
+          </div>
+          
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="Main">
+        <div class="sphinxsidebarwrapper">
+<h1 class="logo"><a href="#">Robot Manipulator UI</a></h1>
+
+
+
+
+
+
+
+
+
+<search id="searchbox" style="display: none" role="search">
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" placeholder="Search"/>
+      <input type="submit" value="Искать" />
+    </form>
+    </div>
+</search>
+<script>document.getElementById('searchbox').style.display = "block"</script><h3>Навигация</h3>
+
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="#">Documentation overview</a><ul>
+  </ul></li>
+</ul>
+</div>
+
+
+
+
+
+
+
+
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &#169;2025.
+      
+      |
+      Powered by <a href="https://www.sphinx-doc.org/">Sphinx 9.1.0</a>
+      &amp; <a href="https://alabaster.readthedocs.io">Alabaster 1.0.0</a>
+      
+      |
+      <a href="_sources/index.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>

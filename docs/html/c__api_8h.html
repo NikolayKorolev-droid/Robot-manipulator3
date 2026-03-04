@@ -1,0 +1,552 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ru">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.16.1"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Robot Manipulator: Файл src/c_api.h</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript">var page_layout=1;</script>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+  $(function() { init_search(); });
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="side-nav" class="ui-resizable side-nav-resizable"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">Robot Manipulator<span id="projectnumber">&#160;1.0</span>
+   </div>
+   <div id="projectbrief">Система моделирования кинематики робота-манипулятора</div>
+  </td>
+ </tr>
+   <tr><td colspan="2">        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <span id="MSearchSelect" class="search-icon" onmouseover="return searchBox.OnSearchSelectShow()" onmouseout="return searchBox.OnSearchSelectHide()"><span class="search-icon-dropdown"></span></span>
+          <input type="text" id="MSearchField" value="" placeholder="Поиск" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><div id="MSearchCloseImg" class="close-icon"></div></a>
+          </span>
+        </div>
+</td></tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.16.1 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+</div><!-- top -->
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(function(){initNavTree('c__api_8h.html','',''); });
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',false,false,'search.php','Поиск',true);
+});
+</script>
+<div id="main-nav"></div>
+<div id="container"><div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Загрузка...</div>
+<div class="SRStatus" id="Searching">Поиск...</div>
+<div class="SRStatus" id="NoMatches">Не найдено</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">Файл c_api.h</div></div>
+</div><!--header-->
+<div class="contents">
+
+<p>C-совместимый API библиотеки Robot <a class="el" href="class_manipulator.html" title="Класс манипулятора — центральный контроллер всех звеньев">Manipulator</a>.  
+<a href="#details">Подробнее...</a></p>
+
+<p><a href="c__api_8h_source.html">См. исходные тексты.</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-typedef-members" class="groupheader"><a id="typedef-members" name="typedef-members"></a>
+Определения типов</h2></td></tr>
+<tr class="memitem:a24183fa6372e072cc09ea8b0fbbb1460" id="r_a24183fa6372e072cc09ea8b0fbbb1460"><td class="memItemLeft">typedef void *&#160;</td><td class="memItemRight"><a class="el" href="#a24183fa6372e072cc09ea8b0fbbb1460">RM_Manipulator</a></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-func-members" class="groupheader"><a id="func-members" name="func-members"></a>
+Функции</h2></td></tr>
+<tr class="memitem:aa23c80475fc6fe19a123b922711c3589" id="r_aa23c80475fc6fe19a123b922711c3589"><td class="memItemLeft">RM_EXPORT RM_Manipulator&#160;</td><td class="memItemRight"><a class="el" href="#aa23c80475fc6fe19a123b922711c3589">rm_create_manipulator</a> ()</td></tr>
+<tr class="memitem:ad5deed2297358dac08e5c4ee9d8c2d68" id="r_ad5deed2297358dac08e5c4ee9d8c2d68"><td class="memItemLeft">RM_EXPORT void&#160;</td><td class="memItemRight"><a class="el" href="#ad5deed2297358dac08e5c4ee9d8c2d68">rm_destroy_manipulator</a> (RM_Manipulator manip)</td></tr>
+<tr class="memitem:a58ef41016730266468e8844d2e24a0c6" id="r_a58ef41016730266468e8844d2e24a0c6"><td class="memItemLeft">RM_EXPORT int&#160;</td><td class="memItemRight"><a class="el" href="#a58ef41016730266468e8844d2e24a0c6">rm_add_link</a> (RM_Manipulator manip, int id, int prev_id, double r, double pitch, double yaw, double roll)</td></tr>
+<tr class="memitem:a176b4c60c2269581f6d8f820eb50950e" id="r_a176b4c60c2269581f6d8f820eb50950e"><td class="memItemLeft">RM_EXPORT int&#160;</td><td class="memItemRight"><a class="el" href="#a176b4c60c2269581f6d8f820eb50950e">rm_add_gripper</a> (RM_Manipulator manip, int id, int prev_id, double r, double pitch, double yaw, double roll, double open_angle)</td></tr>
+<tr class="memitem:ade791be7b38a1e0f87b24994a5d7ff14" id="r_ade791be7b38a1e0f87b24994a5d7ff14"><td class="memItemLeft">RM_EXPORT int&#160;</td><td class="memItemRight"><a class="el" href="#ade791be7b38a1e0f87b24994a5d7ff14">rm_add_camera</a> (RM_Manipulator manip, int id, int prev_id, double r, double pitch, double yaw, double roll, double fov)</td></tr>
+<tr class="memitem:af39761f5b01e808690df41b37e9797c5" id="r_af39761f5b01e808690df41b37e9797c5"><td class="memItemLeft">RM_EXPORT int&#160;</td><td class="memItemRight"><a class="el" href="#af39761f5b01e808690df41b37e9797c5">rm_set_direction</a> (RM_Manipulator manip, int id, double pitch, double yaw, double roll)</td></tr>
+<tr class="memitem:a2a3eb5a17d72e0acf7f1c3898346dba3" id="r_a2a3eb5a17d72e0acf7f1c3898346dba3"><td class="memItemLeft">RM_EXPORT int&#160;</td><td class="memItemRight"><a class="el" href="#a2a3eb5a17d72e0acf7f1c3898346dba3">rm_open_gripper</a> (RM_Manipulator manip, int id, double angle)</td></tr>
+<tr class="memitem:a4c7f4cdb7737703ad6c8b533393b6e8e" id="r_a4c7f4cdb7737703ad6c8b533393b6e8e"><td class="memItemLeft">RM_EXPORT int&#160;</td><td class="memItemRight"><a class="el" href="#a4c7f4cdb7737703ad6c8b533393b6e8e">rm_close_gripper</a> (RM_Manipulator manip, int id)</td></tr>
+<tr class="memitem:a005ee4725db16ffff216815b8f3faeb9" id="r_a005ee4725db16ffff216815b8f3faeb9"><td class="memItemLeft">RM_EXPORT int&#160;</td><td class="memItemRight"><a class="el" href="#a005ee4725db16ffff216815b8f3faeb9">rm_take_photo</a> (RM_Manipulator manip, int id)</td></tr>
+<tr class="memitem:a395e568b2e307dc9dd7d69961c7fc054" id="r_a395e568b2e307dc9dd7d69961c7fc054"><td class="memItemLeft">RM_EXPORT int&#160;</td><td class="memItemRight"><a class="el" href="#a395e568b2e307dc9dd7d69961c7fc054">rm_calculate_position</a> (RM_Manipulator manip, int id, double *out_x, double *out_y, double *out_z)</td></tr>
+<tr class="memitem:aa8eb13eebc929b366a4364210cce25d8" id="r_aa8eb13eebc929b366a4364210cce25d8"><td class="memItemLeft">RM_EXPORT void&#160;</td><td class="memItemRight"><a class="el" href="#aa8eb13eebc929b366a4364210cce25d8">rm_print_structure</a> (RM_Manipulator manip)</td></tr>
+</table>
+<a name="details" id="details"></a><h2 id="header-details" class="groupheader">Подробное описание</h2>
+<div class="textblock"><p>C-совместимый API библиотеки Robot <a class="el" href="class_manipulator.html" title="Класс манипулятора — центральный контроллер всех звеньев">Manipulator</a>. </p>
+<p>Экспортирует функции с префиксом rm_ для вызова из Python (ctypes) и других языков. Коды возврата: 1 — успех, 0 — ошибка, -1 — <a class="el" href="class_manipulator_exception.html" title="Исключение для ошибок манипулятора (например, нарушена цепочка звеньев).">ManipulatorException</a>. </p>
+
+<p class="definition">См. определение в файле <a class="el" href="c__api_8h_source.html">c_api.h</a></p>
+</div><a name="doc-define-members" id="doc-define-members"></a><h2 id="header-doc-define-members" class="groupheader">Макросы</h2>
+<a id="a4f50838d7ea77a75368a4d0f18ea698d" name="a4f50838d7ea77a75368a4d0f18ea698d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4f50838d7ea77a75368a4d0f18ea698d">&#9670;&#160;</a></span>RM_EXPORT</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define RM_EXPORT</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">См. определение в файле <a class="el" href="c__api_8h_source.html">c_api.h</a> строка <a class="el" href="c__api_8h_source.html#l00014">14</a></p>
+
+</div>
+</div>
+<a name="doc-typedef-members" id="doc-typedef-members"></a><h2 id="header-doc-typedef-members" class="groupheader">Типы</h2>
+<a id="a24183fa6372e072cc09ea8b0fbbb1460" name="a24183fa6372e072cc09ea8b0fbbb1460"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a24183fa6372e072cc09ea8b0fbbb1460">&#9670;&#160;</a></span>RM_Manipulator</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef void* RM_Manipulator</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">См. определение в файле <a class="el" href="c__api_8h_source.html">c_api.h</a> строка <a class="el" href="c__api_8h_source.html#l00021">21</a></p>
+
+</div>
+</div>
+<a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Функции</h2>
+<a id="ade791be7b38a1e0f87b24994a5d7ff14" name="ade791be7b38a1e0f87b24994a5d7ff14"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ade791be7b38a1e0f87b24994a5d7ff14">&#9670;&#160;</a></span>rm_add_camera()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">RM_EXPORT int rm_add_camera </td>
+          <td>(</td>
+          <td class="paramtype">RM_Manipulator</td>          <td class="paramname"><span class="paramname"><em>manip</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>id</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>prev_id</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double</td>          <td class="paramname"><span class="paramname"><em>r</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double</td>          <td class="paramname"><span class="paramname"><em>pitch</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double</td>          <td class="paramname"><span class="paramname"><em>yaw</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double</td>          <td class="paramname"><span class="paramname"><em>roll</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double</td>          <td class="paramname"><span class="paramname"><em>fov</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">См. определение в файле <a class="el" href="c__api_8cpp_source.html">c_api.cpp</a> строка <a class="el" href="c__api_8cpp_source.html#l00060">60</a></p>
+
+</div>
+</div>
+<a id="a176b4c60c2269581f6d8f820eb50950e" name="a176b4c60c2269581f6d8f820eb50950e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a176b4c60c2269581f6d8f820eb50950e">&#9670;&#160;</a></span>rm_add_gripper()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">RM_EXPORT int rm_add_gripper </td>
+          <td>(</td>
+          <td class="paramtype">RM_Manipulator</td>          <td class="paramname"><span class="paramname"><em>manip</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>id</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>prev_id</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double</td>          <td class="paramname"><span class="paramname"><em>r</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double</td>          <td class="paramname"><span class="paramname"><em>pitch</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double</td>          <td class="paramname"><span class="paramname"><em>yaw</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double</td>          <td class="paramname"><span class="paramname"><em>roll</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double</td>          <td class="paramname"><span class="paramname"><em>open_angle</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">См. определение в файле <a class="el" href="c__api_8cpp_source.html">c_api.cpp</a> строка <a class="el" href="c__api_8cpp_source.html#l00045">45</a></p>
+
+</div>
+</div>
+<a id="a58ef41016730266468e8844d2e24a0c6" name="a58ef41016730266468e8844d2e24a0c6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a58ef41016730266468e8844d2e24a0c6">&#9670;&#160;</a></span>rm_add_link()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">RM_EXPORT int rm_add_link </td>
+          <td>(</td>
+          <td class="paramtype">RM_Manipulator</td>          <td class="paramname"><span class="paramname"><em>manip</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>id</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>prev_id</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double</td>          <td class="paramname"><span class="paramname"><em>r</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double</td>          <td class="paramname"><span class="paramname"><em>pitch</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double</td>          <td class="paramname"><span class="paramname"><em>yaw</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double</td>          <td class="paramname"><span class="paramname"><em>roll</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">См. определение в файле <a class="el" href="c__api_8cpp_source.html">c_api.cpp</a> строка <a class="el" href="c__api_8cpp_source.html#l00030">30</a></p>
+
+</div>
+</div>
+<a id="a395e568b2e307dc9dd7d69961c7fc054" name="a395e568b2e307dc9dd7d69961c7fc054"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a395e568b2e307dc9dd7d69961c7fc054">&#9670;&#160;</a></span>rm_calculate_position()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">RM_EXPORT int rm_calculate_position </td>
+          <td>(</td>
+          <td class="paramtype">RM_Manipulator</td>          <td class="paramname"><span class="paramname"><em>manip</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>id</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double *</td>          <td class="paramname"><span class="paramname"><em>out_x</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double *</td>          <td class="paramname"><span class="paramname"><em>out_y</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double *</td>          <td class="paramname"><span class="paramname"><em>out_z</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">См. определение в файле <a class="el" href="c__api_8cpp_source.html">c_api.cpp</a> строка <a class="el" href="c__api_8cpp_source.html#l00123">123</a></p>
+
+</div>
+</div>
+<a id="a4c7f4cdb7737703ad6c8b533393b6e8e" name="a4c7f4cdb7737703ad6c8b533393b6e8e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4c7f4cdb7737703ad6c8b533393b6e8e">&#9670;&#160;</a></span>rm_close_gripper()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">RM_EXPORT int rm_close_gripper </td>
+          <td>(</td>
+          <td class="paramtype">RM_Manipulator</td>          <td class="paramname"><span class="paramname"><em>manip</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>id</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">См. определение в файле <a class="el" href="c__api_8cpp_source.html">c_api.cpp</a> строка <a class="el" href="c__api_8cpp_source.html#l00099">99</a></p>
+
+</div>
+</div>
+<a id="aa23c80475fc6fe19a123b922711c3589" name="aa23c80475fc6fe19a123b922711c3589"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa23c80475fc6fe19a123b922711c3589">&#9670;&#160;</a></span>rm_create_manipulator()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">RM_EXPORT RM_Manipulator rm_create_manipulator </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">См. определение в файле <a class="el" href="c__api_8cpp_source.html">c_api.cpp</a> строка <a class="el" href="c__api_8cpp_source.html#l00013">13</a></p>
+
+</div>
+</div>
+<a id="ad5deed2297358dac08e5c4ee9d8c2d68" name="ad5deed2297358dac08e5c4ee9d8c2d68"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad5deed2297358dac08e5c4ee9d8c2d68">&#9670;&#160;</a></span>rm_destroy_manipulator()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">RM_EXPORT void rm_destroy_manipulator </td>
+          <td>(</td>
+          <td class="paramtype">RM_Manipulator</td>          <td class="paramname"><span class="paramname"><em>manip</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">См. определение в файле <a class="el" href="c__api_8cpp_source.html">c_api.cpp</a> строка <a class="el" href="c__api_8cpp_source.html#l00023">23</a></p>
+
+</div>
+</div>
+<a id="a2a3eb5a17d72e0acf7f1c3898346dba3" name="a2a3eb5a17d72e0acf7f1c3898346dba3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2a3eb5a17d72e0acf7f1c3898346dba3">&#9670;&#160;</a></span>rm_open_gripper()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">RM_EXPORT int rm_open_gripper </td>
+          <td>(</td>
+          <td class="paramtype">RM_Manipulator</td>          <td class="paramname"><span class="paramname"><em>manip</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>id</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double</td>          <td class="paramname"><span class="paramname"><em>angle</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">См. определение в файле <a class="el" href="c__api_8cpp_source.html">c_api.cpp</a> строка <a class="el" href="c__api_8cpp_source.html#l00087">87</a></p>
+
+</div>
+</div>
+<a id="aa8eb13eebc929b366a4364210cce25d8" name="aa8eb13eebc929b366a4364210cce25d8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa8eb13eebc929b366a4364210cce25d8">&#9670;&#160;</a></span>rm_print_structure()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">RM_EXPORT void rm_print_structure </td>
+          <td>(</td>
+          <td class="paramtype">RM_Manipulator</td>          <td class="paramname"><span class="paramname"><em>manip</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">См. определение в файле <a class="el" href="c__api_8cpp_source.html">c_api.cpp</a> строка <a class="el" href="c__api_8cpp_source.html#l00148">148</a></p>
+
+</div>
+</div>
+<a id="af39761f5b01e808690df41b37e9797c5" name="af39761f5b01e808690df41b37e9797c5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af39761f5b01e808690df41b37e9797c5">&#9670;&#160;</a></span>rm_set_direction()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">RM_EXPORT int rm_set_direction </td>
+          <td>(</td>
+          <td class="paramtype">RM_Manipulator</td>          <td class="paramname"><span class="paramname"><em>manip</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>id</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double</td>          <td class="paramname"><span class="paramname"><em>pitch</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double</td>          <td class="paramname"><span class="paramname"><em>yaw</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double</td>          <td class="paramname"><span class="paramname"><em>roll</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">См. определение в файле <a class="el" href="c__api_8cpp_source.html">c_api.cpp</a> строка <a class="el" href="c__api_8cpp_source.html#l00075">75</a></p>
+
+</div>
+</div>
+<a id="a005ee4725db16ffff216815b8f3faeb9" name="a005ee4725db16ffff216815b8f3faeb9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a005ee4725db16ffff216815b8f3faeb9">&#9670;&#160;</a></span>rm_take_photo()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">RM_EXPORT int rm_take_photo </td>
+          <td>(</td>
+          <td class="paramtype">RM_Manipulator</td>          <td class="paramname"><span class="paramname"><em>manip</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>id</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">См. определение в файле <a class="el" href="c__api_8cpp_source.html">c_api.cpp</a> строка <a class="el" href="c__api_8cpp_source.html#l00111">111</a></p>
+
+</div>
+</div>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<div id="page-nav" class="page-nav-panel">
+<div id="page-nav-resize-handle"></div>
+<div id="page-nav-tree">
+<div id="page-nav-contents">
+</div><!-- page-nav-contents -->
+</div><!-- page-nav-tree -->
+</div><!-- page-nav -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><b>src</b></li><li class="navelem"><a href="c__api_8h.html">c_api.h</a></li>
+    <li class="footer">Документация по Robot Manipulator. Последние изменения: <span class="timestamp"></span>. Создано системой <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.16.1 </li>
+  </ul>
+</div>
+</body>
+</html>
